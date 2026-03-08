@@ -1,0 +1,77 @@
+/* Page background styling */
+body {
+    background-color: #d0d0d0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main content container */
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px 50px;
+    border-radius: 25px;
+}
+
+/* Large title styling */
+h1 {
+    color: #4a9d1f;
+    font-size: 72px;
+    text-align: center;
+    margin: 0 0 40px 0;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+/* Section headings */
+h2 {
+    color: #4a9d1f;
+    font-size: 48px;
+    text-align: center;
+    margin: 50px 0 30px 0;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+/* Callout heading */
+h3 {
+    color: white;
+    font-size: 42px;
+    margin: 0 0 15px 0;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #000;
+    margin: 18px 0;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 30px;
+}
+
+/* Information callout box */
+aside {
+    background-color: #4a9d1f;
+    color: white;
+    padding: 35px 30px;
+    border-radius: 25px;
+    margin: 50px 0;
+}
+
+/* Callout paragraph */
+aside p {
+    color: #ffffff;
+    margin: 0;
+    text-align: left;
+    font-size: 15px;
+}

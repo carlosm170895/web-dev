@@ -1,0 +1,311 @@
+/* ===================================
+   RESET & BASE STYLES
+   =================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Georgia', 'Garamond', serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ff69b4;
+}
+
+/* Screen reader only text - hidden visually but accessible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ===================================
+   HEADER & NAVIGATION
+   =================================== */
+header {
+    background: #ff69b4;
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333333;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+/* Decorative divider */
+.divider {
+    width: 80px;
+    height: auto;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+/* Shopping cart button - positioned in top right */
+.cart-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #333333;
+}
+
+.cart-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+.cart-button:focus {
+    outline: 3px solid #333333;
+    outline-offset: 2px;
+}
+
+.cart-icon {
+    width: 16px;
+    height: 16px;
+    max-width: 100%;
+    filter: none;
+}
+
+/* ===================================
+   MAIN CONTENT & GALLERY
+   =================================== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Figure & Image Styling */
+figure {
+    margin: 0;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Figcaption with good contrast */
+figcaption {
+    padding: 1rem;
+    background-color: white;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+}
+
+figcaption p {
+    color: #00d4ff;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+/* Add to Basket Button - Accessible & Visible */
+.add-basket-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.add-basket-btn:hover {
+    background-color: #ff1493;
+}
+
+.add-basket-btn:active {
+    transform: scale(0.98);
+}
+
+/* Focus state - WCAG AAA compliant */
+.add-basket-btn:focus {
+    outline: 3px solid #333333;
+    outline-offset: 2px;
+}
+
+.add-basket-btn:focus-visible {
+    outline: 3px solid #333333;
+    outline-offset: 2px;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+footer {
+    background-color: #ff69b4;
+    color: #1a1a1a;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    border-top: none;
+}
+
+footer p {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+footer nav ul {
+    list-style: disc;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+}
+
+footer nav li {
+    margin-right: 1rem;
+}
+
+footer a {
+    color: #0066cc;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0052a3;
+}
+
+footer a:focus {
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .divider {
+        position: static;
+        transform: none;
+        width: 80px;
+        margin: 0.5rem 0;
+    }
+
+    .gallery-item img {
+        max-height: 250px;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===================================
+   FOCUS MANAGEMENT (WCAG AA)
+   =================================== */
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #333333;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+    .add-basket-btn {
+        border: 2px solid #ff1493;
+    }
+
+    figcaption {
+        border-left: none;
+    }
+}

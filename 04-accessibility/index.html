@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Wondering Photographer - Travel photography gallery with high-quality prints available for purchase">
+    <title>The Wondering Photographer - Travel Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ================================
+         HEADER WITH NAVIGATION & CART
+         ================================ -->
+    <header role="banner">
+        <div class="header-content">
+            <h1>The Wondering Photographer</h1>
+            <!-- Decorative divider - hidden from screen readers -->
+            <img src="TheDivider.png" alt="" aria-hidden="true" class="divider">
+            
+            <!-- Shopping cart button with accessible label -->
+            <button class="cart-button" aria-label="View shopping basket">
+                <img src="shopping.svg" alt="" class="cart-icon">
+                <span class="sr-only">Shopping Cart</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ================================
+         MAIN CONTENT - PHOTO GALLERY
+         ================================ -->
+    <main role="main">
+        <section class="gallery" aria-label="Photography gallery">
+            
+            <!-- Photo 1: Ocean/Coast -->
+            <article class="gallery-item">
+    <figure>
+        <img src="OceanPhoto.jpg" alt="Scenic view of the coast of Greenland showing white cliffs and calm blue sea at sunrise" loading="lazy">
+        <figcaption>
+            <p>This was from a fabulous trip to the coast of Greenland with my family. The water was lovely- but very cold!</p>
+        </figcaption>
+    </figure>
+    <button class="add-basket-btn">Add to basket</button>
+</article>
+
+            <!-- Photo 2: Golden Gate Bridge -->
+            <article class="gallery-item">
+                <figure>
+                    <img 
+                        src="BridgePhoto.jpg" 
+                        alt="Looking up at the iconic red towers of the Golden Gate Bridge against blue sky in San Francisco"
+                        loading="lazy">
+                </figure>
+                <figcaption>
+                    <p>A picture of the Golden Gate Bridge.</p>
+                    <button class="add-basket-btn">Add to basket</button>
+                </figcaption>
+            </article>
+
+            <!-- Photo 3: Valley (Glacier River) -->
+            <article class="gallery-item">
+                <figure>
+                    <img 
+                        src="ValleyPhoto.jpg" 
+                        alt="Aerial view of a river valley in Greenland where a glacier used to flow, surrounded by mountains and green vegetation"
+                        loading="lazy">
+                </figure>
+                <figcaption>
+                    <p>Another great photo from Greenland. It's a river valley where a glacier used to be.</p>
+                    <button class="add-basket-btn">Add to basket</button>
+                </figcaption>
+            </article>
+
+            <!-- Photo 4: Waterfall -->
+            <article class="gallery-item">
+                <figure>
+                    <img 
+                        src="WaterfallPhoto.jpg" 
+                        alt="Powerful waterfall cascading from cliff into a deep blue pool, surrounded by lush green moss-covered rocks"
+                        loading="lazy">
+                </figure>
+                <figcaption>
+                    <p>The waterfall made such a lovely sound. I could have fallen asleep!</p>
+                    <button class="add-basket-btn">Add to basket</button>
+                </figcaption>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- ================================
+         FOOTER WITH NAVIGATION
+         ================================ -->
+    <footer role="contentinfo">
+        <p>&copy; Copyright The Wondering Photographer 2018.</p>
+        
+        <nav aria-label="Site navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">About me</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>

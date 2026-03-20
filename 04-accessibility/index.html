@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,98 +8,107 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 
-         HEADER WITH NAVIGATION & CART
-         -->
+
+    <!-- HEADER WITH NAVIGATION & CART -->
     <header role="banner">
         <div class="header-content">
-            <h1>The Wondering Photographer</h1>
+            <div class="header-text">
+                <span class="header-eyebrow">Est. 2018</span>
+                <h1>The Wondering Photographer</h1>
+                <p class="header-tagline">Travel. Wander. Capture.</p>
+            </div>
+
             <!-- Decorative divider - hidden from screen readers -->
             <img src="TheDivider.png" alt="" aria-hidden="true" class="divider">
-            
+
             <!-- Shopping cart button with accessible label -->
             <button class="cart-button" aria-label="View shopping basket">
-                <img src="shopping.svg" alt="" class="cart-icon">
-                <span class="sr-only">Shopping Cart</span>
+                <img src="shopping.svg" alt="" class="cart-icon" aria-hidden="true">
+                <span class="cart-label">Basket</span>
             </button>
         </div>
     </header>
 
-    <!-- 
-         MAIN CONTENT - PHOTO GALLERY
-          -->
+    <!-- MAIN CONTENT - PHOTO GALLERY -->
     <main role="main">
         <section class="gallery" aria-label="Photography gallery">
-            
-            <!-- Photo 1: Ocean/Coast -->
-            <article class="gallery-item">
-    <figure>
-        <img src="OceanPhoto.jpg" alt="Scenic view of the coast of Greenland showing white cliffs and calm blue sea at sunrise" loading="lazy">
-        <figcaption>
-            <p>This was from a fabulous trip to the coast of Greenland with my family. The water was lovely- but very cold!</p>
-        </figcaption>
-    </figure>
-    <button class="add-basket-btn">Add to basket</button>
-</article>
+
+            <!-- Photo 1: Ocean/Coast - LARGE FEATURED -->
+            <article class="gallery-item gallery-item--large">
+                <figure>
+                    <img
+                        src="OceanPhoto.jpg"
+                        alt="Scenic view of the Greenland coast — white cliffs meeting calm blue sea at sunset, with two figures resting on the edge"
+                        loading="eager">
+                    <figcaption>
+                        <span class="photo-location">Greenland Coast</span>
+                        <p>This was from a fabulous trip to the coast of Greenland with my family. The water was lovely — but very cold!</p>
+                        <button class="add-basket-btn" aria-label="Add Greenland Coast photo to basket">Add to basket</button>
+                    </figcaption>
+                </figure>
+            </article>
 
             <!-- Photo 2: Golden Gate Bridge -->
             <article class="gallery-item">
                 <figure>
-                    <img 
-                        src="BridgePhoto.jpg" 
-                        alt="Looking up at the iconic red towers of the Golden Gate Bridge against blue sky in San Francisco"
+                    <img
+                        src="BridgePhoto.jpg"
+                        alt="Looking up at the iconic red towers of the Golden Gate Bridge against a vivid blue sky in San Francisco"
                         loading="lazy">
+                    <figcaption>
+                        <span class="photo-location">San Francisco, USA</span>
+                        <p>A picture of the Golden Gate Bridge. San Francisco!</p>
+                        <button class="add-basket-btn" aria-label="Add Golden Gate Bridge photo to basket">Add to basket</button>
+                    </figcaption>
                 </figure>
-                <figcaption>
-                    <p>A picture of the Golden Gate Bridge.</p>
-                    <button class="add-basket-btn">Add to basket</button>
-                </figcaption>
             </article>
 
             <!-- Photo 3: Valley (Glacier River) -->
             <article class="gallery-item">
                 <figure>
-                    <img 
-                        src="ValleyPhoto.jpg" 
-                        alt="Aerial view of a river valley in Greenland where a glacier used to flow, surrounded by mountains and green vegetation"
+                    <img
+                        src="ValleyPhoto.jpg"
+                        alt="Aerial view of a wide river valley in Greenland where a glacier used to flow, flanked by dramatic mountain ridges"
                         loading="lazy">
+                    <figcaption>
+                        <span class="photo-location">Greenland Interior</span>
+                        <p>Another great photo from Greenland. It's a river valley where a glacier used to be.</p>
+                        <button class="add-basket-btn" aria-label="Add Greenland valley photo to basket">Add to basket</button>
+                    </figcaption>
                 </figure>
-                <figcaption>
-                    <p>Another great photo from Greenland. It's a river valley where a glacier used to be.</p>
-                    <button class="add-basket-btn">Add to basket</button>
-                </figcaption>
             </article>
 
-            <!-- Photo 4: Waterfall -->
-            <article class="gallery-item">
+            <!-- Photo 4: Waterfall - LARGE FEATURED -->
+            <article class="gallery-item gallery-item--tall">
                 <figure>
-                    <img 
-                        src="WaterfallPhoto.jpg" 
-                        alt="Powerful waterfall cascading from cliff into a deep blue pool, surrounded by lush green moss-covered rocks"
+                    <img
+                        src="WaterfallPhoto.jpg"
+                        alt="A powerful waterfall cascading from a cliff into a deep blue pool, surrounded by lush green moss-covered rocks"
                         loading="lazy">
+                    <figcaption>
+                        <span class="photo-location">Iceland</span>
+                        <p>The waterfall made such a lovely sound. I could have fallen asleep!</p>
+                        <button class="add-basket-btn" aria-label="Add waterfall photo to basket">Add to basket</button>
+                    </figcaption>
                 </figure>
-                <figcaption>
-                    <p>The waterfall made such a lovely sound. I could have fallen asleep!</p>
-                    <button class="add-basket-btn">Add to basket</button>
-                </figcaption>
             </article>
 
         </section>
     </main>
 
-    <!-- 
-         FOOTER WITH NAVIGATION
-          -->
+    <!-- FOOTER WITH NAVIGATION -->
     <footer role="contentinfo">
-        <p>&copy; Copyright The Wondering Photographer 2018.</p>
-        
-        <nav aria-label="Site navigation">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#about">About me</a></li>
-            </ul>
-        </nav>
+        <div class="footer-inner">
+            <img src="TheDivider.png" alt="" aria-hidden="true" class="footer-divider">
+            <p class="footer-copy">&copy; Copyright The Wondering Photographer 2018.</p>
+            <nav aria-label="Site navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About me</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 
 </body>
